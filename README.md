@@ -80,7 +80,7 @@ analysis_mags[deep_dip_mask] = target_curve[deep_dip_mask]
 **Method 2: Logarithmic Correction**
 ```python
 negative_mask = analysis_mags - target_curve < 0
-analysis_mags[negative_mask] = target_curve[negative_mask] - np.log2(1 + target_curve[negative_mask] - analysis_mags[negative_mask])
+analysis_mags[negative_mask] = target_curve[negative_mask] - np.log(1 + target_curve[negative_mask] - analysis_mags[negative_mask])
 ```
 
 #### 3. Octave-Based Smoothing
