@@ -195,7 +195,7 @@ if __name__ == "__main__":
             # 对数修正方法
             print("--- Pre-processing: Applying logarithmic correction ---")
             negative_mask = analysis_mags - target_curve < 0
-            analysis_mags[negative_mask] = target_curve[negative_mask]-np.log(1+target_curve[negative_mask] - analysis_mags[negative_mask])
+            analysis_mags[negative_mask] = target_curve[negative_mask]-np.log2(1+target_curve[negative_mask] - analysis_mags[negative_mask])
             
         # 对前置处理后的数据进行平滑，用于寻找初始点
         smoothed_mags = smooth_curve(correction_freqs, analysis_mags, SMOOTHING_TYPE)
