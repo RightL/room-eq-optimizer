@@ -6,6 +6,12 @@ An intelligent room acoustic correction system that automatically analyzes frequ
 
 This project implements an advanced automatic EQ correction algorithm designed to optimize room acoustics for audio systems. Unlike traditional flat response approaches, our algorithm uses a **tilted target curve** that considers psychoacoustic principles and real-world listening preferences.
 
+## 📊 Results Preview
+
+![Frequency Response Correction](frequency_response_sloped_1-6_log_correction.png)
+
+*Example of automatic EQ correction showing original response (blue), target curve (red dashed), and corrected response (green)*
+
 ## ✨ Key Features
 
 - **Intelligent Target Curve**: Tilted frequency response (e.g., 3dB slope from 20Hz to 1kHz) for more natural sound
